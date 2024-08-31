@@ -10,12 +10,14 @@ class Solution:
                 chars[char].append(i)
 
         ans = -1
-
-        for c in chars.values():
-            if len(c) >= 2:
-                ans = max(ans, (max(c) - min(c))) - 1
-
-        return ans
+        updated = False
+        for char in chars.values():
+            if len(char) >= 2:
+                ans = max(ans, (max(char) - min(char)))
+                updated = True
+        if not updated:
+            return ans
+        return ans - 1
 
 
 s1 = "aa"
