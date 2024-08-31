@@ -3,7 +3,7 @@ from typing import List
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         start = 0
-
+        nums.sort()
         for i in range(len(nums)):
             start += 1
             if nums[i] != start:
