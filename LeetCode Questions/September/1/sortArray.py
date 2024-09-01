@@ -2,23 +2,23 @@ from typing import List
 
 # Quick Sort
 
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
-        if len(nums) <= 1:
-            return nums
+# class Solution:
+#     def sortArray(self, nums: List[int]) -> List[int]:
+#         if len(nums) <= 1:
+#             return nums
         
-        pivot = nums[0]
-        l = []
-        r = []
+#         pivot = nums[0]
+#         l = []
+#         r = []
 
-        for i in range(1, len(nums)):
-            if nums[i] > pivot:
-                r.append(nums[i])
-            else:
-                l.append(nums[i])
+#         for i in range(1, len(nums)):
+#             if nums[i] > pivot:
+#                 r.append(nums[i])
+#             else:
+#                 l.append(nums[i])
 
-        res = self.sortArray(l) + [pivot] + self.sortArray(r)
-        return res
+#         res = self.sortArray(l) + [pivot] + self.sortArray(r)
+#         return res
 
 # Insertion Sort
 
@@ -37,10 +37,10 @@ class Solution:
 
 # Merge Sort
 
-# class Solution:
-#     def sortArray(self, nums:List[int]) -> List[int]:
+class Solution:
+    def sortArray(self, nums:List[int]) -> List[int]:
         
-#         return nums
+        return nums
     
 nums = [5,2,3,1]
 print(Solution().sortArray(nums))
